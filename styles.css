@@ -1,22 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* https://fonts.google.com/specimen/Roboto */
+
 html {
     font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .container {
     height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 6fr;
-    gap: 0.4rem;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 2fr 6fr;
 }
 
-.sidebar,
 .header,
 .content {
-    background-color: aqua;
+    background-color: gray;
 }
 
 .sidebar {
     grid-row: 1 / span 2;
+    background-color: #0ea5e9;
+    color: white;
+    font-weight: bold;
+
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    padding-left: 1rem;
+}
+
+.navigation-item,
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 5vh;
+    gap: 1rem;
+}
+
+.title {
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+
+.navigation-icon,
+.dashboard-icon {
+    display: flex;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: #ffffff;
+}
+
+.dashboard-icon>svg {
+    width: 100%;
+}
+
+.navigation-icon>svg {
+    width: 65%;
+}
+
+.top-navigation-bar,
+.bottom-navigation-bar {
+    padding-top: 5vh;
+    font-size: 1.2rem;
+}
+
+
+.navigation-item:hover {
+    top: -2px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    background-color: #7dd3fc;
 }
