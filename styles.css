@@ -1,0 +1,22 @@
+html {
+    font-size: 16px;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 6fr;
+    gap: 0.4rem;
+}
+
+.sidebar,
+.header,
+.content {
+    background-color: aqua;
+}
+
+.sidebar {
+    grid-row: 1 / span 2;
+}
