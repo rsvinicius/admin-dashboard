@@ -89,7 +89,7 @@ html {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 8px;
     width: 83.33vw;
     position: relative;
-    z-index: 10; 
+    z-index: 10;
 }
 
 .top-bar {
@@ -122,7 +122,7 @@ html {
 }
 
 .circle-portrait {
-    width:  4rem;
+    width: 4rem;
     height: 4rem;
     overflow: hidden;
     border-radius: 50%;
@@ -170,8 +170,8 @@ input:focus {
     width: 55%;
 }
 
-.greetings-bar > .circle-portrait {
-    width:  5rem;
+.greetings-bar>.circle-portrait {
+    width: 5rem;
     height: 5rem;
 }
 
@@ -212,5 +212,165 @@ button:hover {
 }
 
 .content {
+    height: 80vh;
     background-color: var(--sky-100);
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
+
+.projects {
+    grid-row: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding-bottom: 1vh;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+    flex-grow: 1;
+}
+
+.project-cards>.card {
+    border-left: 0.5rem solid var(--sky-900);
+    padding: 5%;
+}
+
+.card {
+    border-radius: 0.5rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.card-content {
+    font-size: .9rem;
+    opacity: 0.7;
+}
+
+.card-icons {
+    height: 100%;
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 1vw;
+}
+
+.card-icon {
+    fill: var(--sky-900);
+    width: 5%;
+    transition: transform 0.3s ease;
+}
+
+.card-icon:hover {
+    transform: scale(1.2);
+}
+
+.projects,
+.announcements,
+.trending {
+    padding-top: 2vh;
+    padding-left: 1.5vw;
+}
+
+.projects,
+.trending {
+    padding-bottom: 3vh;
+}
+
+.announcements {
+    font-size: .8rem;
+    height: 100%;
+}
+
+.announcement-bar,
+.trending-bar {
+    width: 90%;
+    height: 85%;
+}
+
+.announcement-bar {
+    padding: 8% 10%
+}
+
+.an-title {
+    font-weight: 500;
+}
+
+.an-content {
+    opacity: 0.7;
+}
+
+hr.solid {
+    border-top: 1px solid #bbb;
+    margin: 1rem 0;
+}
+
+.trending-bar {
+    padding: 3% 7%;
+    height: 30vh;
+    gap: 1vw;
+}
+
+.trending-element {
+    display: flex;
+    gap: 1vw;
+}
+
+.trending-title {
+    opacity: .7;
+}
+
+.avatar >.circle-portrait {
+    width: 3rem;
+    height: 3rem;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.bell-icon {
+    transition: transform 0.3s ease, fill 0.3s ease;
+    display: inline-block;
+  }
+  
+  .bell-icon:hover {
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+  }
+
+  .magnify-icon {
+    transition: opacity 0.3s ease;
+  }
+  
+  .magnify-icon:hover {
+    opacity: 0.5;
+  }
